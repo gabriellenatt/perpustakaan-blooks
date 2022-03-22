@@ -16,7 +16,8 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const {router} = require('./router/router')
+
+const {router} = require('./router/router');
 
 // Initialization PORT
 const port = process.env.PORT || 3000;
@@ -29,7 +30,7 @@ let originOptionCors = {
 app.use(cors(originOptionCors));
 
 // Routing
-app.use('/', router)
+app.use('/', router);
 
 // Port Connection
-app.listen(port, () => `Port connected on ${port}`);
+app.listen(port, () => {`Port connected on ${port}`});

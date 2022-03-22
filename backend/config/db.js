@@ -18,12 +18,12 @@ const connectDB = mysql.createConnection({
     user: DBConfig.USER,
     password: DBConfig.PASSWORD,
     database: DBConfig.DB
-})
+});
 
 //Open MYSQL Connection
-connectDB.connect(err => {
-    if(err) throw  err;
-    console.log('Connected success to database');
+connectDB.connect((err) => {
+    if (err) throw err;
+    console.log('Database connected');
 });
 
 module.exports = connectDB;
