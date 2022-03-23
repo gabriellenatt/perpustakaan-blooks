@@ -15,7 +15,29 @@ class BookController {
             if(err) {
                 console.log(`controller error`);
             } else {
-                console.log('data', data);
+                res.json({
+                    title: 'API Backend toko buku',
+                    message: 'Koleksi Buku',
+                    status: '200',
+                    data
+                });
+            }
+        });
+    }
+
+    static FindBookById(req, res) {
+        // console.log('ini id', req.params.id);
+        const { id } = req.params;
+        Book.showBookById(id, (err, data) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.json({
+                    title: 'API Backend toko buku',
+                    message: 'Koleksi Buku',
+                    status: '200',
+                    data
+                });
             }
         });
     }

@@ -9,6 +9,8 @@ class Controller {
     static Homepage(req, res) {
         res.send('Hai ini controller');
     }
+
+    
 }
 
 module.exports = {
