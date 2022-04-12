@@ -25,9 +25,9 @@ class BookController {
         });
     }
 
-    static FindBookById(req, res) {
+    static FindBookByIdd(req, res) {
         // console.log('ini id', req.params.id);
-        const { id } = req.params;
+        const { id } = req.params;  
         Book.showBookById(id, (err, data) => {
             if (err) {
                 console.log(err);
